@@ -25,5 +25,21 @@ namespace FizzBuzz.Tests
                 Assert.That(actual, Is.EqualTo("Fizz"));
             }
         }
+        [TestFixture]
+        public class WhenNumberDivisibleBy5
+        {
+            [TestCase(5)]
+            [TestCase(10)]
+            [TestCase(20)]
+            public void ShouldReturnBuzz(int number)
+            {
+                // Arrange
+                var sut = new FizzBuzzer();
+                // Act
+                var actual = sut.Start(number);
+                // Assert
+                Assert.That(actual, Is.EqualTo("Buzz"));
+            }
+        }
     }
 }
