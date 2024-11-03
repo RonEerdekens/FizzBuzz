@@ -57,5 +57,21 @@ namespace FizzBuzz.Tests
                 Assert.That(actual, Is.EqualTo("FizzBuzz"));
             }
         }
+        [TestFixture]
+        public class WhenNumberNotDivisibleBy3Or5
+        {
+            [TestCase(1)]
+            [TestCase(2)]
+            [TestCase(4)]
+            public void ShouldReturnNumber(int number)
+            {
+                // Arrange
+                var sut = new FizzBuzzer();
+                // Act
+                var actual = sut.Start(number);
+                // Assert
+                Assert.That(actual, Is.EqualTo(number.ToString()));
+            }
+        }
     }
 }
