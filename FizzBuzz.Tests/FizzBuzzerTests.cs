@@ -13,6 +13,7 @@ namespace FizzBuzz.Tests
         public class WhenNumberDivisibleBy3
         {
             [TestCase(3)]
+            [TestCase(21)]
             public void ShouldReturnFizz(int number)
             {
                 // Arrange

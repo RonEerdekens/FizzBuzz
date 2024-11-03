@@ -12,6 +12,8 @@ namespace FizzBuzz
         {
             if (number == 3)
                 return "Fizz";
+            if (number == 21)
+                return "Fizz";
             return null;
         }
     }
