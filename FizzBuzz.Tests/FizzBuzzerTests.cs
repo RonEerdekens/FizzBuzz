@@ -14,6 +14,7 @@ namespace FizzBuzz.Tests
         {
             [TestCase(3)]
             [TestCase(21)]
+            [TestCase(27)]
             public void ShouldReturnFizz(int number)
             {
                 // Arrange
