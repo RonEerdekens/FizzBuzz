@@ -9,6 +9,7 @@ namespace FizzBuzz.Tests
     [TestFixture]
     public class FizzBuzzerTests
     {
+
         [TestFixture]
         public class WhenNumberDivisibleBy3
         {
@@ -18,12 +19,14 @@ namespace FizzBuzz.Tests
             public void ShouldReturnFizz(int number)
             {
                 // Arrange
-                var sut = new FizzBuzzer();
+                var sut = CreateFizzBuzzer();
                 // Act
                 var actual = sut.Start(number);
                 // Assert
                 Assert.That(actual, Is.EqualTo("Fizz"));
             }
+
+
         }
         [TestFixture]
         public class WhenNumberDivisibleBy5
@@ -34,7 +37,7 @@ namespace FizzBuzz.Tests
             public void ShouldReturnBuzz(int number)
             {
                 // Arrange
-                var sut = new FizzBuzzer();
+                var sut = CreateFizzBuzzer();
                 // Act
                 var actual = sut.Start(number);
                 // Assert
@@ -50,7 +53,7 @@ namespace FizzBuzz.Tests
             public void ShouldReturnFizzBuzz(int number)
             {
                 // Arrange
-                var sut = new FizzBuzzer();
+                var sut = CreateFizzBuzzer();
                 // Act
                 var actual = sut.Start(number);
                 // Assert
@@ -66,12 +69,16 @@ namespace FizzBuzz.Tests
             public void ShouldReturnNumber(int number)
             {
                 // Arrange
-                var sut = new FizzBuzzer();
+                var sut = CreateFizzBuzzer();
                 // Act
                 var actual = sut.Start(number);
                 // Assert
                 Assert.That(actual, Is.EqualTo(number.ToString()));
             }
+        }
+        private static FizzBuzzer CreateFizzBuzzer()
+        {
+            return new FizzBuzzer();
         }
     }
 }
