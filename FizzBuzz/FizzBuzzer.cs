@@ -10,14 +10,13 @@ namespace FizzBuzz
     {
         public string Start(int number)
         {
-            if (number % 3 == 0 && number % 5 == 0)
-                return "FizzBuzz";
+            var result = string.Empty;
             if (number % 3 == 0)
-                return "Fizz";
+                result += "Fizz";
             if (number % 5 == 0)
-                return "Buzz";
-           
-            return number.ToString();
+                result += "Buzz";
+            return string.IsNullOrEmpty(result) ? number.ToString() : result;
+
         }
     }
 }
